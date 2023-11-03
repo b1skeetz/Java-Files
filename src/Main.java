@@ -28,9 +28,7 @@ public class Main {
             if(file.exists()){
                 file.createNewFile();
             }
-            for (String s : content) {
-                pw.println(s);
-            }
+            content.forEach(pw::println);
             pw.close();
         }catch(IOException e){
             System.out.println("Error: " + e.getMessage());
